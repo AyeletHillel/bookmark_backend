@@ -58,7 +58,7 @@ app.get("/", (req, res) => {
 app.get("/bookmark", async (req, res) => {
   try {
     // send all bookmarks
-    res.json(await bookmark.find({}));
+    res.json(await bookMark.find({}));
   } catch (error) {
     //send error
     res.status(400).json(error);
@@ -68,7 +68,7 @@ app.get("/bookmark", async (req, res) => {
 //create route
 app.post("/bookmark", async (req, res) => {
   try {
-    res.json(await bookmark.create(req.body));
+    res.json(await bookMark.create(req.body));
   } catch (error) {
     //send error
     res.status(400).json(error);
@@ -79,7 +79,7 @@ app.post("/bookmark", async (req, res) => {
 app.put("/bookmark/:id", async (req, res) => {
   try {
     res.json(
-      await bookmark.findByIdAndUpdate(req.params.id, req.body, { new: true })
+      await bookMark.findByIdAndUpdate(req.params.id, req.body, { new: true })
     );
   } catch (error) {
     //send error
@@ -90,7 +90,7 @@ app.put("/bookmark/:id", async (req, res) => {
 //delete route
 app.delete("/bookmark/:id", async (req, res) => {
   try {
-    res.json(await bookmark.findByIdAndRemove(req.params.id));
+    res.json(await bookMark.findByIdAndRemove(req.params.id));
   } catch (error) {
     //send error
     res.status(400).json(error);
@@ -100,7 +100,7 @@ app.delete("/bookmark/:id", async (req, res) => {
 //show route
 app.get("/bookmark/:id", async (req, res) => {
   try {
-    res.json(await bookmark.findById(req.params.id));
+    res.json(await bookMark.findById(req.params.id));
   } catch (error) {
     //send error
     res.status(400).json(error);
