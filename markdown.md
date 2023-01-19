@@ -26,5 +26,6 @@
 |--------|--------|-----------|-----------------|
 | Index | GET | /bookmark | Gets all entries |
 | Create | POST | /bookmark | Creates a new entry |
+| Show | GET | /bookmark:id | Gets 1 entry
 | Update | PUT | /bookmark:id | Updates Existing Entry |
 | Delete | DELETE | /bookmark:id | Removes entry from database
