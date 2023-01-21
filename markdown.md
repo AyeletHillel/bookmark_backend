@@ -25,6 +25,7 @@
 | Routes | Method | EndPoints | Expected Result |
 |--------|--------|-----------|-----------------|
 | Index | GET | /bookmark | Gets all entries |
+| Show | GET | /bookmark/:id | Gets 1 entries |
 | Create | POST | /bookmark | Creates a new entry |
-| Update | PUT | /bookmark:id | Updates Existing Entry |
-| Delete | DELETE | /bookmark:id | Removes entry from database
+| Update | PUT | /bookmark/:id | Updates Existing Entry |
+| Delete | DELETE | /bookmark/:id | Removes entry from database
